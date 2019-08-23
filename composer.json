@@ -1,7 +1,7 @@
 {
     "name": "awuniversity/oauth2-client-bundle",
     "type": "symfony-bundle",
-    "description": "Integration with league/oauth2-client to provide services",
+    "description": "Integration with awuniversity/oauth2-client to provide services",
     "keywords": [],
     "homepage": "http://awuniversity.pl",
     "license": "MIT",
@@ -16,7 +16,7 @@
         "symfony/dependency-injection": "^4.0",
         "symfony/routing": "^4.0",
         "symfony/http-foundation": "^4.0",
-        "league/oauth2-client": "^1.0|^2.0"
+        "awuniversity/oauth2-client": "^1.0"
     },
     "autoload": {
         "psr-4": { "AwU\\OAuth2ClientBundle\\": "src/" }
