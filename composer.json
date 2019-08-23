@@ -2,7 +2,7 @@
     "name": "awuniversity/oauth2-client-bundle",
     "type": "symfony-bundle",
     "description": "Integration with league/oauth2-client to provide services",
-    "keywords": ["oauth2"],
+    "keywords": [],
     "homepage": "http://awuniversity.pl",
     "license": "MIT",
     "authors": [
