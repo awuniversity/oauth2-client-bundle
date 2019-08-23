@@ -8,7 +8,7 @@
 
 require __DIR__.'/../vendor/autoload.php';
 
-use KnpU\OAuth2ClientBundle\DependencyInjection\KnpUOAuth2ClientExtension;
+use AwU\OAuth2ClientBundle\DependencyInjection\AwUOAuth2ClientExtension;
 use Symfony\Component\Config\Definition\Builder\TreeBuilder;
 use Symfony\Component\Config\Definition\ArrayNode;
 use Symfony\Component\Config\Definition\BooleanNode;
@@ -32,7 +32,7 @@ function replaceInString($startTextMarker, $endTextMarker, $fullText, $replaceme
 }
 
 $sectionTemplate = <<<EOF
-        # will create service: "knpu.oauth2.client.%PROVIDER_NAME%"
+        # will create service: "awu.oauth2.client.%PROVIDER_NAME%"
         # an instance of: %CLIENT_CLASS%
         # composer require %PACKAGE_NAME%
         %PROVIDER_NAME%:
@@ -49,14 +49,14 @@ $sectionTemplate = <<<EOF
             # use_state: true
 EOF;
 
-$extension = new KnpUOAuth2ClientExtension();
+$extension = new AwUOAuth2ClientExtension();
 $configSections = [];
 $installTreeDetails = [
     'longest_name_and_url' => 0,
     'longest_package_name' => 0,
     'types' => []
 ];
-foreach (KnpUOAuth2ClientExtension::getAllSupportedTypes() as $type) {
+foreach (AwUOAuth2ClientExtension::getAllSupportedTypes() as $type) {
     // we don't document the "generic" type in this way
     if ($type == 'generic') {
         continue;
@@ -226,7 +226,7 @@ any provider.
 
 ```yml
 # app/config/config.yml
-knpu_oauth2_client:
+awu_oauth2_client:
     # can be set to the service id of a service that implements Guzzle\ClientInterface
     # http_client: null
 

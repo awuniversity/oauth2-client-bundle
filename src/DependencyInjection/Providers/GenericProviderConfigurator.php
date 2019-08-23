@@ -2,13 +2,13 @@
 
 /*
  * OAuth2 Client Bundle
- * Copyright (c) KnpUniversity <http://knpuniversity.com/>
+ * Copyright (c) AwUniversity <http://awuniversity.com/>
  *
  * For the full copyright and license information, please view the LICENSE
  * file that was distributed with this source code.
  */
 
-namespace KnpU\OAuth2ClientBundle\DependencyInjection\Providers;
+namespace AwU\OAuth2ClientBundle\DependencyInjection\Providers;
 
 use Symfony\Component\Config\Definition\Builder\NodeBuilder;
 
@@ -23,7 +23,7 @@ class GenericProviderConfigurator implements ProviderConfiguratorInterface
             ->end()
             ->scalarNode('client_class')
                 ->info('If you have a sub-class of OAuth2Client you want to use, add it here')
-                ->defaultValue('KnpU\OAuth2ClientBundle\Client\OAuth2Client')
+                ->defaultValue('AwU\OAuth2ClientBundle\Client\OAuth2Client')
             ->end()
             ->arrayNode('provider_options')
                 ->info('Other options to pass to your provider\'s constructor')

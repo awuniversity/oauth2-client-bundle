@@ -5,21 +5,21 @@
     xsi:schemaLocation="http://symfony.com/schema/dic/services http://symfony.com/schema/dic/services/services-1.0.xsd">
 
     <services>
-        <service id="knpu.oauth2.provider_factory" class="KnpU\OAuth2ClientBundle\DependencyInjection\ProviderFactory" public="false">
+        <service id="awu.oauth2.provider_factory" class="AwU\OAuth2ClientBundle\DependencyInjection\ProviderFactory" public="false">
             <argument type="service" id="router" />
         </service>
 
-        <service id="knpu.oauth2.registry" class="KnpU\OAuth2ClientBundle\Client\ClientRegistry" public="true">
+        <service id="awu.oauth2.registry" class="AwU\OAuth2ClientBundle\Client\ClientRegistry" public="true">
             <argument type="service" id="service_container" />
             <argument /> <!-- argument added dynamically -->
         </service>
 
-        <service id="knpu.oauth2.user_provider" class="KnpU\OAuth2ClientBundle\Security\User\OAuthUserProvider" public="false" />
+        <service id="awu.oauth2.user_provider" class="AwU\OAuth2ClientBundle\Security\User\OAuthUserProvider" public="false" />
 
         <!-- Add service alias for autowiring -->
-        <service id="KnpU\OAuth2ClientBundle\Client\ClientRegistry" alias="knpu.oauth2.registry" public="false" />
+        <service id="AwU\OAuth2ClientBundle\Client\ClientRegistry" alias="awu.oauth2.registry" public="false" />
 
         <!-- Set an alias for easier use -->
-        <service id="oauth2.registry" alias="knpu.oauth2.registry" public="true" />
+        <service id="oauth2.registry" alias="awu.oauth2.registry" public="true" />
     </services>
 </container>

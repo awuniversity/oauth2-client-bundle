@@ -2,26 +2,26 @@
 
 /*
  * OAuth2 Client Bundle
- * Copyright (c) KnpUniversity <http://knpuniversity.com/>
+ * Copyright (c) AwUniversity <http://awuniversity.com/>
  *
  * For the full copyright and license information, please view the LICENSE
  * file that was distributed with this source code.
  */
 
-namespace KnpU\OAuth2ClientBundle\Security\Authenticator;
+namespace AwU\OAuth2ClientBundle\Security\Authenticator;
 
-use KnpU\OAuth2ClientBundle\Exception\InvalidStateException;
-use KnpU\OAuth2ClientBundle\Security\Exception\IdentityProviderAuthenticationException;
-use KnpU\OAuth2ClientBundle\Security\Exception\InvalidStateAuthenticationException;
-use KnpU\OAuth2ClientBundle\Security\Exception\NoAuthCodeAuthenticationException;
-use KnpU\OAuth2ClientBundle\Exception\MissingAuthorizationCodeException;
-use KnpU\OAuth2ClientBundle\Security\Helper\FinishRegistrationBehavior;
-use KnpU\OAuth2ClientBundle\Security\Helper\PreviousUrlHelper;
-use KnpU\OAuth2ClientBundle\Security\Helper\SaveAuthFailureMessage;
+use AwU\OAuth2ClientBundle\Exception\InvalidStateException;
+use AwU\OAuth2ClientBundle\Security\Exception\IdentityProviderAuthenticationException;
+use AwU\OAuth2ClientBundle\Security\Exception\InvalidStateAuthenticationException;
+use AwU\OAuth2ClientBundle\Security\Exception\NoAuthCodeAuthenticationException;
+use AwU\OAuth2ClientBundle\Exception\MissingAuthorizationCodeException;
+use AwU\OAuth2ClientBundle\Security\Helper\FinishRegistrationBehavior;
+use AwU\OAuth2ClientBundle\Security\Helper\PreviousUrlHelper;
+use AwU\OAuth2ClientBundle\Security\Helper\SaveAuthFailureMessage;
 use League\OAuth2\Client\Provider\Exception\IdentityProviderException;
 use Symfony\Component\Security\Core\User\UserInterface;
 use Symfony\Component\Security\Guard\AbstractGuardAuthenticator;
-use KnpU\OAuth2ClientBundle\Client\OAuth2ClientInterface;
+use AwU\OAuth2ClientBundle\Client\OAuth2ClientInterface;
 
 abstract class SocialAuthenticator extends AbstractGuardAuthenticator
 {

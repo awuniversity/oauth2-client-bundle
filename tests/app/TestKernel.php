@@ -2,16 +2,16 @@
 
 /*
  * OAuth2 Client Bundle
- * Copyright (c) KnpUniversity <http://knpuniversity.com/>
+ * Copyright (c) AwUniversity <http://awuniversity.com/>
  *
  * For the full copyright and license information, please view the LICENSE
  * file that was distributed with this source code.
  */
 
-namespace KnpU\OAuth2ClientBundle\tests\app;
+namespace AwU\OAuth2ClientBundle\tests\app;
 
 use GuzzleHttp\Client;
-use KnpU\OAuth2ClientBundle\KnpUOAuth2ClientBundle;
+use AwU\OAuth2ClientBundle\AwUOAuth2ClientBundle;
 use Symfony\Bundle\FrameworkBundle\FrameworkBundle;
 use Symfony\Component\Config\Loader\LoaderInterface;
 use Symfony\Component\DependencyInjection\ContainerBuilder;
@@ -24,7 +24,7 @@ class TestKernel extends Kernel
     {
         return [
             new FrameworkBundle(),
-            new KnpUOAuth2ClientBundle(),
+            new AwUOAuth2ClientBundle(),
         ];
     }
 
@@ -47,7 +47,7 @@ class TestKernel extends Kernel
                 'annotations' => Kernel::VERSION_ID >= 30200 ? false : [],
             ]);
 
-            $container->loadFromExtension('knpu_oauth2_client', [
+            $container->loadFromExtension('awu_oauth2_client', [
                 'http_client' => 'test.http_client',
                 'clients' => [
                     'my_facebook' => [

@@ -2,13 +2,13 @@
 
 /*
  * OAuth2 Client Bundle
- * Copyright (c) KnpUniversity <http://knpuniversity.com/>
+ * Copyright (c) AwUniversity <http://awuniversity.com/>
  *
  * For the full copyright and license information, please view the LICENSE
  * file that was distributed with this source code.
  */
 
-namespace KnpU\OAuth2ClientBundle\DependencyInjection;
+namespace AwU\OAuth2ClientBundle\DependencyInjection;
 
 use Symfony\Component\Config\Definition\Builder\TreeBuilder;
 use Symfony\Component\Config\Definition\ConfigurationInterface;
@@ -17,10 +17,10 @@ class Configuration implements ConfigurationInterface
 {
     public function getConfigTreeBuilder()
     {
-        $treeBuilder = new TreeBuilder('knpu_oauth2_client');
+        $treeBuilder = new TreeBuilder('awu_oauth2_client');
         $rootNode = method_exists($treeBuilder, 'getRootNode')
             ? $treeBuilder->getRootNode()
-            : $treeBuilder->root('knpu_oauth2_client');
+            : $treeBuilder->root('awu_oauth2_client');
 
         $rootNode
             ->children()
@@ -48,7 +48,7 @@ class Configuration implements ConfigurationInterface
                 ->ifTrue(function ($v) {
                     return isset($v['http_client_options'], $v['http_client']) && !empty($v['http_client_options']);
                 })
-                ->thenInvalid('You cannot use both "http_client_options" and "http_client" at the same time under "knpu_oauth2_client".')
+                ->thenInvalid('You cannot use both "http_client_options" and "http_client" at the same time under "awu_oauth2_client".')
             ->end()
         ;
 

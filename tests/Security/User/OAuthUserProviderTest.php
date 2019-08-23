@@ -2,16 +2,16 @@
 
 /*
  * OAuth2 Client Bundle
- * Copyright (c) KnpUniversity <http://knpuniversity.com/>
+ * Copyright (c) AwUniversity <http://awuniversity.com/>
  *
  * For the full copyright and license information, please view the LICENSE
  * file that was distributed with this source code.
  */
 
-namespace KnpU\OAuth2ClientBundle\Tests\Security\User;
+namespace AwU\OAuth2ClientBundle\Tests\Security\User;
 
-use KnpU\OAuth2ClientBundle\Security\User\OAuthUser;
-use KnpU\OAuth2ClientBundle\Security\User\OAuthUserProvider;
+use AwU\OAuth2ClientBundle\Security\User\OAuthUser;
+use AwU\OAuth2ClientBundle\Security\User\OAuthUserProvider;
 use Symfony\Component\Security\Core\Exception\UnsupportedUserException;
 use Symfony\Component\Security\Core\User\User;
 use Symfony\Component\Security\Core\User\UserInterface;

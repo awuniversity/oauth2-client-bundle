@@ -2,15 +2,15 @@
 
 /*
  * OAuth2 Client Bundle
- * Copyright (c) KnpUniversity <http://knpuniversity.com/>
+ * Copyright (c) AwUniversity <http://awuniversity.com/>
  *
  * For the full copyright and license information, please view the LICENSE
  * file that was distributed with this source code.
  */
 
-namespace KnpU\OAuth2ClientBundle\tests\Client;
+namespace AwU\OAuth2ClientBundle\tests\Client;
 
-use KnpU\OAuth2ClientBundle\Client\OAuth2Client;
+use AwU\OAuth2ClientBundle\Client\OAuth2Client;
 use League\OAuth2\Client\Provider\FacebookUser;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\RequestStack;
@@ -153,7 +153,7 @@ class OAuth2ClientTest extends TestCase
     }
 
     /**
-     * @expectedException \KnpU\OAuth2ClientBundle\Exception\InvalidStateException
+     * @expectedException \AwU\OAuth2ClientBundle\Exception\InvalidStateException
      */
     public function testGetAccessTokenThrowsInvalidStateException()
     {
@@ -169,7 +169,7 @@ class OAuth2ClientTest extends TestCase
     }
 
     /**
-     * @expectedException \KnpU\OAuth2ClientBundle\Exception\MissingAuthorizationCodeException
+     * @expectedException \AwU\OAuth2ClientBundle\Exception\MissingAuthorizationCodeException
      */
     public function testGetAccessTokenThrowsMissingAuthCodeException()
     {

@@ -2,16 +2,16 @@
 
 /*
  * OAuth2 Client Bundle
- * Copyright (c) KnpUniversity <http://knpuniversity.com/>
+ * Copyright (c) AwUniversity <http://awuniversity.com/>
  *
  * For the full copyright and license information, please view the LICENSE
  * file that was distributed with this source code.
  */
 
-namespace KnpU\OAuth2ClientBundle\Client;
+namespace AwU\OAuth2ClientBundle\Client;
 
-use KnpU\OAuth2ClientBundle\Exception\InvalidStateException;
-use KnpU\OAuth2ClientBundle\Exception\MissingAuthorizationCodeException;
+use AwU\OAuth2ClientBundle\Exception\InvalidStateException;
+use AwU\OAuth2ClientBundle\Exception\MissingAuthorizationCodeException;
 use League\OAuth2\Client\Provider\AbstractProvider;
 use League\OAuth2\Client\Provider\Exception\IdentityProviderException;
 use League\OAuth2\Client\Token\AccessToken;
@@ -20,7 +20,7 @@ use Symfony\Component\HttpFoundation\RequestStack;
 
 class OAuth2Client implements OAuth2ClientInterface
 {
-    const OAUTH2_SESSION_STATE_KEY = 'knpu.oauth2_client_state';
+    const OAUTH2_SESSION_STATE_KEY = 'awu.oauth2_client_state';
 
     /** @var AbstractProvider */
     private $provider;

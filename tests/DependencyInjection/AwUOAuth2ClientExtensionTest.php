@@ -2,16 +2,16 @@
 
 /*
  * OAuth2 Client Bundle
- * Copyright (c) KnpUniversity <http://knpuniversity.com/>
+ * Copyright (c) AwUniversity <http://awuniversity.com/>
  *
  * For the full copyright and license information, please view the LICENSE
  * file that was distributed with this source code.
  */
 
-namespace KnpU\OAuth2ClientBundle\tests\DependencyInjection;
+namespace AwU\OAuth2ClientBundle\tests\DependencyInjection;
 
-use KnpU\OAuth2ClientBundle\DependencyInjection\KnpUOAuth2ClientExtension;
-use KnpU\OAuth2ClientBundle\DependencyInjection\Providers\ProviderConfiguratorInterface;
+use AwU\OAuth2ClientBundle\DependencyInjection\AwUOAuth2ClientExtension;
+use AwU\OAuth2ClientBundle\DependencyInjection\Providers\ProviderConfiguratorInterface;
 use Symfony\Component\Config\Definition\ArrayNode;
 use Symfony\Component\Config\Definition\BooleanNode;
 use Symfony\Component\Config\Definition\Builder\TreeBuilder;
@@ -20,7 +20,7 @@ use Symfony\Component\DependencyInjection\ContainerBuilder;
 use Symfony\Component\DependencyInjection\Reference;
 use PHPUnit\Framework\TestCase;
 
-class KnpUOAuth2ClientExtensionTest extends TestCase
+class AwUOAuth2ClientExtensionTest extends TestCase
 {
     /** @var ContainerBuilder */
     protected $configuration;
@@ -28,17 +28,17 @@ class KnpUOAuth2ClientExtensionTest extends TestCase
     public function testNoClientMakesNoServices()
     {
         $this->configuration = new ContainerBuilder();
-        $loader = new KnpUOAuth2ClientExtension();
+        $loader = new AwUOAuth2ClientExtension();
         $config = [];
         $loader->load([$config], $this->configuration);
 
-        $this->assertFalse($this->configuration->hasDefinition('knpu.oauth2.facebook_client'));
+        $this->assertFalse($this->configuration->hasDefinition('awu.oauth2.facebook_client'));
     }
 
     public function testFacebookProviderMakesService()
     {
         $this->configuration = new ContainerBuilder();
-        $loader = new KnpUOAuth2ClientExtension(false);
+        $loader = new AwUOAuth2ClientExtension(false);
         $config = ['clients' => ['facebook' => [
             'type' => 'facebook',
             'client_id' => 'CLIENT_ID',
@@ -49,12 +49,12 @@ class KnpUOAuth2ClientExtensionTest extends TestCase
         ]]];
         $loader->load([$config], $this->configuration);
 
-        $providerDefinition = $this->configuration->getDefinition('knpu.oauth2.provider.facebook');
+        $providerDefinition = $this->configuration->getDefinition('awu.oauth2.provider.facebook');
 
         $factory = $providerDefinition->getFactory();
         // make sure the factory is correct
         $this->assertEquals(
-            [new Reference('knpu.oauth2.provider_factory'), 'createProvider'],
+            [new Reference('awu.oauth2.provider_factory'), 'createProvider'],
             $factory
         );
 
@@ -71,14 +71,14 @@ class KnpUOAuth2ClientExtensionTest extends TestCase
         );
 
         // the custom class is used
-        $clientDefinition = $this->configuration->getDefinition('knpu.oauth2.client.facebook');
+        $clientDefinition = $this->configuration->getDefinition('awu.oauth2.client.facebook');
         $this->assertEquals(
-            'KnpU\OAuth2ClientBundle\Client\Provider\FacebookClient',
+            'AwU\OAuth2ClientBundle\Client\Provider\FacebookClient',
             $clientDefinition->getClass()
         );
         $this->assertEquals(
             [
-                new Reference('knpu.oauth2.provider.facebook'),
+                new Reference('awu.oauth2.provider.facebook'),
                 new Reference('request_stack'),
             ],
             $clientDefinition->getArguments()
@@ -86,7 +86,7 @@ class KnpUOAuth2ClientExtensionTest extends TestCase
 
         // the client service has an alias
         $this->assertTrue(
-            $this->configuration->hasAlias('KnpU\OAuth2ClientBundle\Client\Provider\FacebookClient'),
+            $this->configuration->hasAlias('AwU\OAuth2ClientBundle\Client\Provider\FacebookClient'),
             'FacebookClient service is missing an alias'
         );
     }
@@ -106,9 +106,9 @@ class KnpUOAuth2ClientExtensionTest extends TestCase
 
     public function getAllProviderConfigurators()
     {
-        $extension = new KnpUOAuth2ClientExtension();
+        $extension = new AwUOAuth2ClientExtension();
         $configurators = [];
-        foreach (KnpUOAuth2ClientExtension::getAllSupportedTypes() as $type) {
+        foreach (AwUOAuth2ClientExtension::getAllSupportedTypes() as $type) {
             $configurators[$type] = [$extension->getConfigurator($type)];
         }
         return $configurators;
@@ -120,21 +120,21 @@ class KnpUOAuth2ClientExtensionTest extends TestCase
     public function testAllClientsCreateDefinition($type, array $inputConfig)
     {
         $this->configuration = new ContainerBuilder();
-        $loader = new KnpUOAuth2ClientExtension(false);
+        $loader = new AwUOAuth2ClientExtension(false);
         $inputConfig['type'] = $type;
         $config = ['clients' => ['test_service' => $inputConfig]];
         $loader->load([$config], $this->configuration);
 
-        $this->assertTrue($this->configuration->hasDefinition('knpu.oauth2.provider.test_service'));
-        $this->assertTrue($this->configuration->hasDefinition('knpu.oauth2.client.test_service'));
+        $this->assertTrue($this->configuration->hasDefinition('awu.oauth2.provider.test_service'));
+        $this->assertTrue($this->configuration->hasDefinition('awu.oauth2.client.test_service'));
     }
 
     public function provideTypesAndConfig()
     {
         $tests = [];
-        $extension = new KnpUOAuth2ClientExtension();
+        $extension = new AwUOAuth2ClientExtension();
 
-        foreach (KnpUOAuth2ClientExtension::getAllSupportedTypes() as $type) {
+        foreach (AwUOAuth2ClientExtension::getAllSupportedTypes() as $type) {
             $configurator = $extension->getConfigurator($type);
             $tree = new TreeBuilder();
             $configNode = $tree->root('testing');
@@ -185,13 +185,13 @@ class KnpUOAuth2ClientExtensionTest extends TestCase
         ];
 
         $this->configuration = new ContainerBuilder();
-        $loader = new KnpUOAuth2ClientExtension(false);
+        $loader = new AwUOAuth2ClientExtension(false);
         $config = ['clients' => [
             'custom_provider' => $clientConfig,
         ]];
         $loader->load([$config], $this->configuration);
 
-        $providerDefinition = $this->configuration->getDefinition('knpu.oauth2.provider.custom_provider');
+        $providerDefinition = $this->configuration->getDefinition('awu.oauth2.provider.custom_provider');
         $this->assertEquals(
             'Foo\Bar\Provider',
             $providerDefinition->getClass()
@@ -216,7 +216,7 @@ class KnpUOAuth2ClientExtensionTest extends TestCase
         );
 
         // the custom class is used
-        $clientDefinition = $this->configuration->getDefinition('knpu.oauth2.client.custom_provider');
+        $clientDefinition = $this->configuration->getDefinition('awu.oauth2.client.custom_provider');
         $this->assertEquals(
             'Foo\Bar\Client',
             $clientDefinition->getClass()
@@ -230,7 +230,7 @@ class KnpUOAuth2ClientExtensionTest extends TestCase
     public function testBadClientsConfiguration(array $badClientsConfig)
     {
         $this->configuration = new ContainerBuilder();
-        $loader = new KnpUOAuth2ClientExtension(false);
+        $loader = new AwUOAuth2ClientExtension(false);
         $config = ['clients' => $badClientsConfig];
         $loader->load([$config], $this->configuration);
     }
@@ -280,15 +280,15 @@ class KnpUOAuth2ClientExtensionTest extends TestCase
 
     public function testGetAllSupportedTypes()
     {
-        $types = KnpUOAuth2ClientExtension::getAllSupportedTypes();
+        $types = AwUOAuth2ClientExtension::getAllSupportedTypes();
 
         $this->assertTrue(in_array('facebook', $types, true));
     }
 
     public function testGetAlias()
     {
-        $extension = new KnpUOAuth2ClientExtension();
-        $this->assertEquals('knpu_oauth2_client', $extension->getAlias());
+        $extension = new AwUOAuth2ClientExtension();
+        $this->assertEquals('awu_oauth2_client', $extension->getAlias());
     }
 
     protected function tearDown()

@@ -2,63 +2,63 @@
 
 /*
  * OAuth2 Client Bundle
- * Copyright (c) KnpUniversity <http://knpuniversity.com/>
+ * Copyright (c) AwUniversity <http://awuniversity.com/>
  *
  * For the full copyright and license information, please view the LICENSE
  * file that was distributed with this source code.
  */
 
-namespace KnpU\OAuth2ClientBundle\DependencyInjection;
+namespace AwU\OAuth2ClientBundle\DependencyInjection;
 
-use KnpU\OAuth2ClientBundle\DependencyInjection\Providers\AmazonProviderConfigurator;
-use KnpU\OAuth2ClientBundle\DependencyInjection\Providers\Auth0ProviderConfigurator;
-use KnpU\OAuth2ClientBundle\DependencyInjection\Providers\AzureProviderConfigurator;
-use KnpU\OAuth2ClientBundle\DependencyInjection\Providers\BitbucketProviderConfigurator;
-use KnpU\OAuth2ClientBundle\DependencyInjection\Providers\BoxProviderConfigurator;
-use KnpU\OAuth2ClientBundle\DependencyInjection\Providers\BufferProviderConfigurator;
-use KnpU\OAuth2ClientBundle\DependencyInjection\Providers\CanvasLMSProviderConfigurator;
-use KnpU\OAuth2ClientBundle\DependencyInjection\Providers\CleverProviderConfigurator;
-use KnpU\OAuth2ClientBundle\DependencyInjection\Providers\DevianArtProviderConfigurator;
-use KnpU\OAuth2ClientBundle\DependencyInjection\Providers\DigitalOceanProviderConfigurator;
-use KnpU\OAuth2ClientBundle\DependencyInjection\Providers\DiscordProviderConfigurator;
-use KnpU\OAuth2ClientBundle\DependencyInjection\Providers\DribbbleProviderConfigurator;
-use KnpU\OAuth2ClientBundle\DependencyInjection\Providers\DropboxProviderConfigurator;
-use KnpU\OAuth2ClientBundle\DependencyInjection\Providers\DrupalProviderConfigurator;
-use KnpU\OAuth2ClientBundle\DependencyInjection\Providers\ElanceProviderConfigurator;
-use KnpU\OAuth2ClientBundle\DependencyInjection\Providers\EventbriteProviderConfigurator;
-use KnpU\OAuth2ClientBundle\DependencyInjection\Providers\EveOnlineProviderConfigurator;
-use KnpU\OAuth2ClientBundle\DependencyInjection\Providers\FacebookProviderConfigurator;
-use KnpU\OAuth2ClientBundle\DependencyInjection\Providers\FitbitProviderConfigurator;
-use KnpU\OAuth2ClientBundle\DependencyInjection\Providers\FoursquareProviderConfigurator;
-use KnpU\OAuth2ClientBundle\DependencyInjection\Providers\GenericProviderConfigurator;
-use KnpU\OAuth2ClientBundle\DependencyInjection\Providers\GeocachingProviderConfigurator;
-use KnpU\OAuth2ClientBundle\DependencyInjection\Providers\GithubProviderConfigurator;
-use KnpU\OAuth2ClientBundle\DependencyInjection\Providers\GitlabProviderConfigurator;
-use KnpU\OAuth2ClientBundle\DependencyInjection\Providers\GoogleProviderConfigurator;
-use KnpU\OAuth2ClientBundle\DependencyInjection\Providers\HeadHunterProviderConfigurator;
-use KnpU\OAuth2ClientBundle\DependencyInjection\Providers\HerokuProviderConfigurator;
-use KnpU\OAuth2ClientBundle\DependencyInjection\Providers\InstagramProviderConfigurator;
-use KnpU\OAuth2ClientBundle\DependencyInjection\Providers\JiraProviderConfigurator;
-use KnpU\OAuth2ClientBundle\DependencyInjection\Providers\KeycloakProviderConfigurator;
-use KnpU\OAuth2ClientBundle\DependencyInjection\Providers\LinkedInProviderConfigurator;
-use KnpU\OAuth2ClientBundle\DependencyInjection\Providers\MailRuProviderConfigurator;
-use KnpU\OAuth2ClientBundle\DependencyInjection\Providers\MicrosoftProviderConfigurator;
-use KnpU\OAuth2ClientBundle\DependencyInjection\Providers\MollieProviderConfigurator;
-use KnpU\OAuth2ClientBundle\DependencyInjection\Providers\OdnoklassnikiProviderConfigurator;
-use KnpU\OAuth2ClientBundle\DependencyInjection\Providers\PaypalProviderConfigurator;
-use KnpU\OAuth2ClientBundle\DependencyInjection\Providers\ProviderConfiguratorInterface;
-use KnpU\OAuth2ClientBundle\DependencyInjection\Providers\PsnProviderConfigurator;
-use KnpU\OAuth2ClientBundle\DependencyInjection\Providers\SalesforceProviderConfigurator;
-use KnpU\OAuth2ClientBundle\DependencyInjection\Providers\SlackProviderConfigurator;
-use KnpU\OAuth2ClientBundle\DependencyInjection\Providers\StravaProviderConfigurator;
-use KnpU\OAuth2ClientBundle\DependencyInjection\Providers\StripeProviderConfigurator;
-use KnpU\OAuth2ClientBundle\DependencyInjection\Providers\UberProviderConfigurator;
-use KnpU\OAuth2ClientBundle\DependencyInjection\Providers\UnsplashProviderConfigurator;
-use KnpU\OAuth2ClientBundle\DependencyInjection\Providers\VimeoProviderConfigurator;
-use KnpU\OAuth2ClientBundle\DependencyInjection\Providers\VKontakteProviderConfigurator;
-use KnpU\OAuth2ClientBundle\DependencyInjection\Providers\YahooProviderConfigurator;
-use KnpU\OAuth2ClientBundle\DependencyInjection\Providers\YandexProviderConfigurator;
-use KnpU\OAuth2ClientBundle\DependencyInjection\Providers\ZendeskProviderConfigurator;
+use AwU\OAuth2ClientBundle\DependencyInjection\Providers\AmazonProviderConfigurator;
+use AwU\OAuth2ClientBundle\DependencyInjection\Providers\Auth0ProviderConfigurator;
+use AwU\OAuth2ClientBundle\DependencyInjection\Providers\AzureProviderConfigurator;
+use AwU\OAuth2ClientBundle\DependencyInjection\Providers\BitbucketProviderConfigurator;
+use AwU\OAuth2ClientBundle\DependencyInjection\Providers\BoxProviderConfigurator;
+use AwU\OAuth2ClientBundle\DependencyInjection\Providers\BufferProviderConfigurator;
+use AwU\OAuth2ClientBundle\DependencyInjection\Providers\CanvasLMSProviderConfigurator;
+use AwU\OAuth2ClientBundle\DependencyInjection\Providers\CleverProviderConfigurator;
+use AwU\OAuth2ClientBundle\DependencyInjection\Providers\DevianArtProviderConfigurator;
+use AwU\OAuth2ClientBundle\DependencyInjection\Providers\DigitalOceanProviderConfigurator;
+use AwU\OAuth2ClientBundle\DependencyInjection\Providers\DiscordProviderConfigurator;
+use AwU\OAuth2ClientBundle\DependencyInjection\Providers\DribbbleProviderConfigurator;
+use AwU\OAuth2ClientBundle\DependencyInjection\Providers\DropboxProviderConfigurator;
+use AwU\OAuth2ClientBundle\DependencyInjection\Providers\DrupalProviderConfigurator;
+use AwU\OAuth2ClientBundle\DependencyInjection\Providers\ElanceProviderConfigurator;
+use AwU\OAuth2ClientBundle\DependencyInjection\Providers\EventbriteProviderConfigurator;
+use AwU\OAuth2ClientBundle\DependencyInjection\Providers\EveOnlineProviderConfigurator;
+use AwU\OAuth2ClientBundle\DependencyInjection\Providers\FacebookProviderConfigurator;
+use AwU\OAuth2ClientBundle\DependencyInjection\Providers\FitbitProviderConfigurator;
+use AwU\OAuth2ClientBundle\DependencyInjection\Providers\FoursquareProviderConfigurator;
+use AwU\OAuth2ClientBundle\DependencyInjection\Providers\GenericProviderConfigurator;
+use AwU\OAuth2ClientBundle\DependencyInjection\Providers\GeocachingProviderConfigurator;
+use AwU\OAuth2ClientBundle\DependencyInjection\Providers\GithubProviderConfigurator;
+use AwU\OAuth2ClientBundle\DependencyInjection\Providers\GitlabProviderConfigurator;
+use AwU\OAuth2ClientBundle\DependencyInjection\Providers\GoogleProviderConfigurator;
+use AwU\OAuth2ClientBundle\DependencyInjection\Providers\HeadHunterProviderConfigurator;
+use AwU\OAuth2ClientBundle\DependencyInjection\Providers\HerokuProviderConfigurator;
+use AwU\OAuth2ClientBundle\DependencyInjection\Providers\InstagramProviderConfigurator;
+use AwU\OAuth2ClientBundle\DependencyInjection\Providers\JiraProviderConfigurator;
+use AwU\OAuth2ClientBundle\DependencyInjection\Providers\KeycloakProviderConfigurator;
+use AwU\OAuth2ClientBundle\DependencyInjection\Providers\LinkedInProviderConfigurator;
+use AwU\OAuth2ClientBundle\DependencyInjection\Providers\MailRuProviderConfigurator;
+use AwU\OAuth2ClientBundle\DependencyInjection\Providers\MicrosoftProviderConfigurator;
+use AwU\OAuth2ClientBundle\DependencyInjection\Providers\MollieProviderConfigurator;
+use AwU\OAuth2ClientBundle\DependencyInjection\Providers\OdnoklassnikiProviderConfigurator;
+use AwU\OAuth2ClientBundle\DependencyInjection\Providers\PaypalProviderConfigurator;
+use AwU\OAuth2ClientBundle\DependencyInjection\Providers\ProviderConfiguratorInterface;
+use AwU\OAuth2ClientBundle\DependencyInjection\Providers\PsnProviderConfigurator;
+use AwU\OAuth2ClientBundle\DependencyInjection\Providers\SalesforceProviderConfigurator;
+use AwU\OAuth2ClientBundle\DependencyInjection\Providers\SlackProviderConfigurator;
+use AwU\OAuth2ClientBundle\DependencyInjection\Providers\StravaProviderConfigurator;
+use AwU\OAuth2ClientBundle\DependencyInjection\Providers\StripeProviderConfigurator;
+use AwU\OAuth2ClientBundle\DependencyInjection\Providers\UberProviderConfigurator;
+use AwU\OAuth2ClientBundle\DependencyInjection\Providers\UnsplashProviderConfigurator;
+use AwU\OAuth2ClientBundle\DependencyInjection\Providers\VimeoProviderConfigurator;
+use AwU\OAuth2ClientBundle\DependencyInjection\Providers\VKontakteProviderConfigurator;
+use AwU\OAuth2ClientBundle\DependencyInjection\Providers\YahooProviderConfigurator;
+use AwU\OAuth2ClientBundle\DependencyInjection\Providers\YandexProviderConfigurator;
+use AwU\OAuth2ClientBundle\DependencyInjection\Providers\ZendeskProviderConfigurator;
 use Symfony\Component\Config\Definition\Builder\NodeDefinition;
 use Symfony\Component\Config\Definition\Builder\TreeBuilder;
 use Symfony\Component\Config\Definition\Exception\InvalidConfigurationException;
@@ -70,7 +70,7 @@ use Symfony\Component\HttpKernel\DependencyInjection\Extension;
 use Symfony\Component\DependencyInjection\Loader\XmlFileLoader;
 use Symfony\Component\Config\FileLocator;
 
-class KnpUOAuth2ClientExtension extends Extension
+class AwUOAuth2ClientExtension extends Extension
 {
     /** @var bool */
     private $checkExternalClassExistence;
@@ -134,7 +134,7 @@ class KnpUOAuth2ClientExtension extends Extension
     ];
 
     /**
-     * KnpUOAuth2ClientExtension constructor.
+     * AwUOAuth2ClientExtension constructor.
      *
      * @param bool $checkExternalClassExistence
      */
@@ -167,7 +167,7 @@ class KnpUOAuth2ClientExtension extends Extension
             // manually make sure "type" is there
             if (!isset($clientConfig['type'])) {
                 throw new InvalidConfigurationException(sprintf(
-                    'Your "knpu_oauth2_client.clients.%s" config entry is missing the "type" key.',
+                    'Your "awu_oauth2_client.clients.%s" config entry is missing the "type" key.',
                     $key
                 ));
             }
@@ -176,17 +176,17 @@ class KnpUOAuth2ClientExtension extends Extension
             unset($clientConfig['type']);
             if (!isset(self::$supportedProviderTypes[$type])) {
                 throw new InvalidConfigurationException(sprintf(
-                    'The "knpu_oauth2_client.clients" config "type" key "%s" is not supported. We support (%s)',
+                    'The "awu_oauth2_client.clients" config "type" key "%s" is not supported. We support (%s)',
                     $type,
                     implode(', ', self::$supportedProviderTypes)
                 ));
             }
 
             // process the configuration
-            $tree = new TreeBuilder('knpu_oauth2_client/clients/' . $key);
+            $tree = new TreeBuilder('awu_oauth2_client/clients/' . $key);
             $node = method_exists($tree, 'getRootNode')
                 ? $tree->getRootNode()
-                : $tree->root('knpu_oauth2_client/clients/' . $key);
+                : $tree->root('awu_oauth2_client/clients/' . $key);
 
             $this->buildConfigurationForType($node, $type);
             $processor = new Processor();
@@ -220,7 +220,7 @@ class KnpUOAuth2ClientExtension extends Extension
             $clientServiceKeys[$key] = $clientServiceKey;
         }
 
-        $container->getDefinition('knpu.oauth2.registry')
+        $container->getDefinition('awu.oauth2.registry')
             ->replaceArgument(1, $clientServiceKeys);
     }
 
@@ -248,7 +248,7 @@ class KnpUOAuth2ClientExtension extends Extension
             ));
         }
 
-        $providerServiceKey = sprintf('knpu.oauth2.provider.%s', $providerKey);
+        $providerServiceKey = sprintf('awu.oauth2.provider.%s', $providerKey);
 
         $providerDefinition = $container->register(
             $providerServiceKey,
@@ -257,7 +257,7 @@ class KnpUOAuth2ClientExtension extends Extension
         $providerDefinition->setPublic(false);
 
         $providerDefinition->setFactory([
-            new Reference('knpu.oauth2.provider_factory'),
+            new Reference('awu.oauth2.provider_factory'),
             'createProvider',
         ]);
 
@@ -269,7 +269,7 @@ class KnpUOAuth2ClientExtension extends Extension
             $collaborators,
         ]);
 
-        $clientServiceKey = sprintf('knpu.oauth2.client.%s', $providerKey);
+        $clientServiceKey = sprintf('awu.oauth2.client.%s', $providerKey);
         $clientDefinition = $container->register(
             $clientServiceKey,
             $clientClass
@@ -320,13 +320,13 @@ class KnpUOAuth2ClientExtension extends Extension
    }
 
     /**
-     * Overridden so the alias isn't "knp_uo_auth2_client".
+     * Overridden so the alias isn't "aw_uo_auth2_client".
      *
      * @return string
      */
     public function getAlias()
     {
-        return 'knpu_oauth2_client';
+        return 'awu_oauth2_client';
     }
 
     private function buildConfigurationForType(NodeDefinition $node, $type)

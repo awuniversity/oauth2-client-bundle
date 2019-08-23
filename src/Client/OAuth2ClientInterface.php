@@ -2,13 +2,13 @@
 
 /*
  * OAuth2 Client Bundle
- * Copyright (c) KnpUniversity <http://knpuniversity.com/>
+ * Copyright (c) AwUniversity <http://awuniversity.com/>
  *
  * For the full copyright and license information, please view the LICENSE
  * file that was distributed with this source code.
  */
 
-namespace KnpU\OAuth2ClientBundle\Client;
+namespace AwU\OAuth2ClientBundle\Client;
 
 use League\OAuth2\Client\Token\AccessToken;
 
@@ -34,8 +34,8 @@ interface OAuth2ClientInterface
      *
      * @return \League\OAuth2\Client\Token\AccessToken
      *
-     * @throws \KnpU\OAuth2ClientBundle\Exception\InvalidStateException
-     * @throws \KnpU\OAuth2ClientBundle\Exception\MissingAuthorizationCodeException
+     * @throws \AwU\OAuth2ClientBundle\Exception\InvalidStateException
+     * @throws \AwU\OAuth2ClientBundle\Exception\MissingAuthorizationCodeException
      * @throws \League\OAuth2\Client\Provider\Exception\IdentityProviderException If token cannot be fetched
      */
     public function getAccessToken();

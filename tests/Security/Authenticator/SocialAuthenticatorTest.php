@@ -2,17 +2,17 @@
 
 /*
  * OAuth2 Client Bundle
- * Copyright (c) KnpUniversity <http://knpuniversity.com/>
+ * Copyright (c) AwUniversity <http://awuniversity.com/>
  *
  * For the full copyright and license information, please view the LICENSE
  * file that was distributed with this source code.
  */
 
-namespace KnpU\OAuth2ClientBundle\Tests\Security\Authenticator;
+namespace AwU\OAuth2ClientBundle\Tests\Security\Authenticator;
 
-use KnpU\OAuth2ClientBundle\Exception\MissingAuthorizationCodeException;
-use KnpU\OAuth2ClientBundle\Security\Authenticator\SocialAuthenticator;
-use KnpU\OAuth2ClientBundle\Client\OAuth2Client;
+use AwU\OAuth2ClientBundle\Exception\MissingAuthorizationCodeException;
+use AwU\OAuth2ClientBundle\Security\Authenticator\SocialAuthenticator;
+use AwU\OAuth2ClientBundle\Client\OAuth2Client;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\Security\Core\Authentication\Token\TokenInterface;
 use Symfony\Component\Security\Core\Exception\AuthenticationException;
@@ -25,7 +25,7 @@ class SocialAuthenticatorTest extends TestCase
     public function testFetchAccessTokenSimplyReturns()
     {
         $authenticator = new StubSocialAuthenticator();
-        $client = $this->prophesize('KnpU\OAuth2ClientBundle\Client\OAuth2Client');
+        $client = $this->prophesize('AwU\OAuth2ClientBundle\Client\OAuth2Client');
         $client->getAccessToken()
             ->willReturn('expected_access_token');
 
@@ -34,12 +34,12 @@ class SocialAuthenticatorTest extends TestCase
     }
 
     /**
-     * @expectedException \KnpU\OAuth2ClientBundle\Security\Exception\NoAuthCodeAuthenticationException
+     * @expectedException \AwU\OAuth2ClientBundle\Security\Exception\NoAuthCodeAuthenticationException
      */
     public function testFetchAccessTokenThrowsAuthenticationException()
     {
         $authenticator = new StubSocialAuthenticator();
-        $client = $this->prophesize('KnpU\OAuth2ClientBundle\Client\OAuth2Client');
+        $client = $this->prophesize('AwU\OAuth2ClientBundle\Client\OAuth2Client');
         $client->getAccessToken()
             ->willThrow(new MissingAuthorizationCodeException());
 

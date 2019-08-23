@@ -2,15 +2,15 @@
 
 /*
  * OAuth2 Client Bundle
- * Copyright (c) KnpUniversity <http://knpuniversity.com/>
+ * Copyright (c) AwUniversity <http://awuniversity.com/>
  *
  * For the full copyright and license information, please view the LICENSE
  * file that was distributed with this source code.
  */
 
-namespace KnpU\OAuth2ClientBundle\tests\Security\Exception;
+namespace AwU\OAuth2ClientBundle\tests\Security\Exception;
 
-use KnpU\OAuth2ClientBundle\Security\Exception\NoAuthCodeAuthenticationException;
+use AwU\OAuth2ClientBundle\Security\Exception\NoAuthCodeAuthenticationException;
 use PHPUnit\Framework\TestCase;
 
 /**

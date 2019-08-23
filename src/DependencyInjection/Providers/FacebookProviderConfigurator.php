@@ -2,13 +2,13 @@
 
 /*
  * OAuth2 Client Bundle
- * Copyright (c) KnpUniversity <http://knpuniversity.com/>
+ * Copyright (c) AwUniversity <http://awuniversity.com/>
  *
  * For the full copyright and license information, please view the LICENSE
  * file that was distributed with this source code.
  */
 
-namespace KnpU\OAuth2ClientBundle\DependencyInjection\Providers;
+namespace AwU\OAuth2ClientBundle\DependencyInjection\Providers;
 
 use Symfony\Component\Config\Definition\Builder\NodeBuilder;
 
@@ -55,6 +55,6 @@ class FacebookProviderConfigurator implements ProviderConfiguratorInterface
 
     public function getClientClass(array $config)
     {
-        return 'KnpU\OAuth2ClientBundle\Client\Provider\FacebookClient';
+        return 'AwU\OAuth2ClientBundle\Client\Provider\FacebookClient';
     }
 }
