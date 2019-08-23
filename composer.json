@@ -7,8 +7,7 @@
     "license": "MIT",
     "authors": [
         {
-            "name": "Firstname Lastname",
-            "email": "oauth.test1100@gmail.com"
+            "name": "Firstname Lastname"
         }
     ],
     "require": {
@@ -26,7 +25,7 @@
         "psr-4": { "AwU\\OAuth2ClientBundle\\Tests\\": "tests/" }
     },
     "require-dev": {
-        "league/oauth2-google": "^1.1|^2.0",
+        "league/oauth2-facebook": "^1.1|^2.0",
         "symfony/security-guard": "^3.0",
         "phpunit/phpunit": "^4.8.36"
     },
