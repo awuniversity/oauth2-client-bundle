@@ -60,7 +60,7 @@ class AwUOAuth2ClientExtensionTest extends TestCase
 
         $this->assertEquals(
             [
-                'League\OAuth2\Client\Provider\Facebook',
+                'AwU\OAuth2\Client\Provider\Facebook',
                 ['clientId' => 'CLIENT_ID', 'clientSecret' => 'SECRET', 'graphApiVersion' => 'API_VERSION'],
                 'the_route_name',
                 ['route_params' => 'foo'],

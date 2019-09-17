@@ -26,7 +26,7 @@ class FacebookProviderConfigurator implements ProviderConfiguratorInterface
 
     public function getProviderClass(array $config)
     {
-        return 'League\OAuth2\Client\Provider\Facebook';
+        return 'AwU\OAuth2\Client\Provider\Facebook';
     }
 
     public function getProviderOptions(array $config)
@@ -40,12 +40,12 @@ class FacebookProviderConfigurator implements ProviderConfiguratorInterface
 
     public function getPackagistName()
     {
-        return 'league/oauth2-facebook';
+        return 'awuniversity/oauth2-facebook';
     }
 
     public function getLibraryHomepage()
     {
-        return 'https://github.com/thephpleague/oauth2-facebook';
+        return 'https://github.com/awuniversity/oauth2-facebook';
     }
 
     public function getProviderDisplayName()

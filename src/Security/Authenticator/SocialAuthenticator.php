@@ -18,7 +18,7 @@ use AwU\OAuth2ClientBundle\Exception\MissingAuthorizationCodeException;
 use AwU\OAuth2ClientBundle\Security\Helper\FinishRegistrationBehavior;
 use AwU\OAuth2ClientBundle\Security\Helper\PreviousUrlHelper;
 use AwU\OAuth2ClientBundle\Security\Helper\SaveAuthFailureMessage;
-use League\OAuth2\Client\Provider\Exception\IdentityProviderException;
+use AwU\OAuth2\Client\Provider\Exception\IdentityProviderException;
 use Symfony\Component\Security\Core\User\UserInterface;
 use Symfony\Component\Security\Guard\AbstractGuardAuthenticator;
 use AwU\OAuth2ClientBundle\Client\OAuth2ClientInterface;

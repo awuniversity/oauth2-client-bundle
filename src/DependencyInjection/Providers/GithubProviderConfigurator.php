@@ -21,7 +21,7 @@ class GithubProviderConfigurator implements ProviderConfiguratorInterface
 
     public function getProviderClass(array $config)
     {
-        return 'League\OAuth2\Client\Provider\Github';
+        return 'AwU\OAuth2\Client\Provider\Github';
     }
 
     public function getProviderOptions(array $config)
@@ -34,12 +34,12 @@ class GithubProviderConfigurator implements ProviderConfiguratorInterface
 
     public function getPackagistName()
     {
-        return 'league/oauth2-github';
+        return 'awuniversity/oauth2-github';
     }
 
     public function getLibraryHomepage()
     {
-        return 'https://github.com/thephpleague/oauth2-github';
+        return 'https://github.com/awuniversity/oauth2-github';
     }
 
     public function getProviderDisplayName()

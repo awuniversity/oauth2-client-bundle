@@ -10,7 +10,7 @@
 
 namespace AwU\OAuth2ClientBundle\Security\Exception;
 
-use League\OAuth2\Client\Provider\Exception\IdentityProviderException;
+use AwU\OAuth2\Client\Provider\Exception\IdentityProviderException;
 use Symfony\Component\Security\Core\Exception\AuthenticationException;
 
 /**

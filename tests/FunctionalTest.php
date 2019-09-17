@@ -26,7 +26,7 @@ class FunctionalTest extends TestCase
         /** @var \AwU\OAuth2ClientBundle\Client\OAuth2Client $client */
         $client = $container->get('awu.oauth2.client.my_facebook');
         $this->assertInstanceOf('AwU\OAuth2ClientBundle\Client\Provider\FacebookClient', $client);
-        $this->assertInstanceOf('League\OAuth2\Client\Provider\Facebook', $client->getOAuth2Provider());
+        $this->assertInstanceOf('AwU\OAuth2\Client\Provider\Facebook', $client->getOAuth2Provider());
 
         $client2 = $container->get('awu.oauth2.registry')
             ->getClient('my_facebook');

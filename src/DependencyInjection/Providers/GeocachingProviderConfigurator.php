@@ -11,7 +11,7 @@
 namespace AwU\OAuth2ClientBundle\DependencyInjection\Providers;
 
 use AwU\OAuth2ClientBundle\Client\Provider\GeocachingClient;
-use League\OAuth2\Client\Provider\Geocaching;
+use AwU\OAuth2\Client\Provider\Geocaching;
 use Symfony\Component\Config\Definition\Builder\NodeBuilder;
 
 class GeocachingProviderConfigurator implements ProviderConfiguratorInterface

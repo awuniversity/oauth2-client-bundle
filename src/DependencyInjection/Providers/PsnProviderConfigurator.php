@@ -21,7 +21,7 @@ class PsnProviderConfigurator implements ProviderConfiguratorInterface
 
     public function getProviderClass(array $config)
     {
-        return 'League\OAuth2\Client\Provider\Psn';
+        return 'AwU\OAuth2\Client\Provider\Psn';
     }
 
     public function getProviderOptions(array $config)

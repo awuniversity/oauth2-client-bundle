@@ -12,9 +12,9 @@ namespace AwU\OAuth2ClientBundle\Client;
 
 use AwU\OAuth2ClientBundle\Exception\InvalidStateException;
 use AwU\OAuth2ClientBundle\Exception\MissingAuthorizationCodeException;
-use League\OAuth2\Client\Provider\AbstractProvider;
-use League\OAuth2\Client\Provider\Exception\IdentityProviderException;
-use League\OAuth2\Client\Token\AccessToken;
+use AwU\OAuth2\Client\Provider\AbstractProvider;
+use AwU\OAuth2\Client\Provider\Exception\IdentityProviderException;
+use AwU\OAuth2\Client\Token\AccessToken;
 use Symfony\Component\HttpFoundation\RedirectResponse;
 use Symfony\Component\HttpFoundation\RequestStack;
 
@@ -82,7 +82,7 @@ class OAuth2Client implements OAuth2ClientInterface
     /**
      * Call this after the user is redirected back to get the access token.
      *
-     * @return \League\OAuth2\Client\Token\AccessToken
+     * @return \AwU\OAuth2\Client\Token\AccessToken
      *
      * @throws InvalidStateException
      * @throws MissingAuthorizationCodeException
@@ -113,7 +113,7 @@ class OAuth2Client implements OAuth2ClientInterface
      * Returns the "User" information (called a resource owner).
      *
      * @param AccessToken $accessToken
-     * @return \League\OAuth2\Client\Provider\ResourceOwnerInterface
+     * @return \AwU\OAuth2\Client\Provider\ResourceOwnerInterface
      */
     public function fetchUserFromToken(AccessToken $accessToken)
     {
@@ -126,7 +126,7 @@ class OAuth2Client implements OAuth2ClientInterface
      * Only use this if you don't need the access token, but only
      * need the user.
      *
-     * @return \League\OAuth2\Client\Provider\ResourceOwnerInterface
+     * @return \AwU\OAuth2\Client\Provider\ResourceOwnerInterface
      */
     public function fetchUser()
     {

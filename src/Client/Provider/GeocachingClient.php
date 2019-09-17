@@ -11,8 +11,8 @@
 namespace AwU\OAuth2ClientBundle\Client\Provider;
 
 use AwU\OAuth2ClientBundle\Client\OAuth2Client;
-use League\OAuth2\Client\Token\AccessToken;
-use League\OAuth2\Client\Provider\GeocachingResourceOwner;
+use AwU\OAuth2\Client\Token\AccessToken;
+use AwU\OAuth2\Client\Provider\GeocachingResourceOwner;
 
 class GeocachingClient extends OAuth2Client
 {

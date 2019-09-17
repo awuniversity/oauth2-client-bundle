@@ -21,7 +21,7 @@ class StravaProviderConfigurator implements ProviderConfiguratorInterface
 
     public function getProviderClass(array $config)
     {
-        return 'League\OAuth2\Client\Provider\Strava';
+        return 'AwU\OAuth2\Client\Provider\Strava';
     }
 
     public function getProviderOptions(array $config)

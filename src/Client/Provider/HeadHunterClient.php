@@ -11,7 +11,7 @@
 namespace AwU\OAuth2ClientBundle\Client\Provider;
 
 use AwU\OAuth2ClientBundle\Client\OAuth2Client;
-use League\OAuth2\Client\Token\AccessToken;
+use AwU\OAuth2\Client\Token\AccessToken;
 use AlexMasterov\OAuth2\Client\Provider\HeadHunterResourceOwner;
 
 class HeadHunterClient extends OAuth2Client

@@ -19,7 +19,7 @@ class LinkedInProviderConfigurator implements ProviderConfiguratorInterface
         $node
             ->integerNode('api_version')
                 ->defaultNull()
-                ->info('Optional value to specify Linkedin\'s API version to use. As the time of writing, v1 is still used by default by league/oauth2-linkedin.')
+                ->info('Optional value to specify Linkedin\'s API version to use. As the time of writing, v1 is still used by default by awu/oauth2-linkedin.')
             ->end()
             ->arrayNode('fields')
                 ->prototype('scalar')->end()
@@ -30,7 +30,7 @@ class LinkedInProviderConfigurator implements ProviderConfiguratorInterface
 
     public function getProviderClass(array $config)
     {
-        return 'League\OAuth2\Client\Provider\LinkedIn';
+        return 'AwU\OAuth2\Client\Provider\LinkedIn';
     }
 
     public function getProviderOptions(array $config)
@@ -53,12 +53,12 @@ class LinkedInProviderConfigurator implements ProviderConfiguratorInterface
 
     public function getPackagistName()
     {
-        return 'league/oauth2-linkedin';
+        return 'awuniversity/oauth2-linkedin';
     }
 
     public function getLibraryHomepage()
     {
-        return 'https://github.com/thephpleague/oauth2-linkedin';
+        return 'https://github.com/awuniversity/oauth2-linkedin';
     }
 
     public function getProviderDisplayName()

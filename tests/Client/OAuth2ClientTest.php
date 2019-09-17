@@ -11,7 +11,7 @@
 namespace AwU\OAuth2ClientBundle\tests\Client;
 
 use AwU\OAuth2ClientBundle\Client\OAuth2Client;
-use League\OAuth2\Client\Provider\FacebookUser;
+use AwU\OAuth2\Client\Provider\FacebookUser;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\RequestStack;
 use PHPUnit\Framework\TestCase;
@@ -28,7 +28,7 @@ class OAuth2ClientTest extends TestCase
     {
         $this->requestStack = new RequestStack();
         $this->session = $this->prophesize('Symfony\Component\HttpFoundation\Session\SessionInterface');
-        $this->provider = $this->prophesize('League\OAuth2\Client\Provider\AbstractProvider');
+        $this->provider = $this->prophesize('AwU\OAuth2\Client\Provider\AbstractProvider');
 
         $this->request = new Request();
         $this->request->setSession($this->session->reveal());
@@ -123,7 +123,7 @@ class OAuth2ClientTest extends TestCase
         $this->session->get(OAuth2Client::OAUTH2_SESSION_STATE_KEY)
             ->willReturn('THE_STATE');
 
-        $expectedToken = $this->prophesize('League\OAuth2\Client\Token\AccessToken');
+        $expectedToken = $this->prophesize('AwU\OAuth2\Client\Token\AccessToken');
         $this->provider->getAccessToken('authorization_code', ['code' => 'CODE_ABC'])
             ->willReturn($expectedToken->reveal());
 
@@ -139,7 +139,7 @@ class OAuth2ClientTest extends TestCase
     {
         $this->request->request->set('code', 'CODE_ABC');
 
-        $expectedToken = $this->prophesize('League\OAuth2\Client\Token\AccessToken');
+        $expectedToken = $this->prophesize('AwU\OAuth2\Client\Token\AccessToken');
         $this->provider->getAccessToken('authorization_code', ['code' => 'CODE_ABC'])
             ->willReturn($expectedToken->reveal());
 
@@ -189,7 +189,7 @@ class OAuth2ClientTest extends TestCase
     {
         $this->request->request->set('code', 'CODE_ABC');
 
-        $expectedToken = $this->prophesize('League\OAuth2\Client\Token\AccessToken');
+        $expectedToken = $this->prophesize('AwU\OAuth2\Client\Token\AccessToken');
         $this->provider->getAccessToken('authorization_code', ['code' => 'CODE_ABC'])
             ->willReturn($expectedToken->reveal());
 
@@ -212,7 +212,7 @@ class OAuth2ClientTest extends TestCase
         $this->provider->getResourceOwner($actualToken)->willReturn($resourceOwner);
         $user = $client->fetchUser($actualToken);
 
-        $this->assertInstanceOf('League\OAuth2\Client\Provider\FacebookUser', $user);
+        $this->assertInstanceOf('AwU\OAuth2\Client\Provider\FacebookUser', $user);
         $this->assertEquals('testUser', $user->getName());
     }
 }

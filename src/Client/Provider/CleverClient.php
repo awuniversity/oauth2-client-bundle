@@ -11,7 +11,7 @@
 namespace AwU\OAuth2ClientBundle\Client\Provider;
 
 use AwU\OAuth2ClientBundle\Client\OAuth2Client;
-use League\OAuth2\Client\Token\AccessToken;
+use AwU\OAuth2\Client\Token\AccessToken;
 use Schoolrunner\OAuth2\Client\User\CleverUser;
 
 class CleverClient extends OAuth2Client

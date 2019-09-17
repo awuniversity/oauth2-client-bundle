@@ -10,7 +10,7 @@
 
 namespace AwU\OAuth2ClientBundle\Client;
 
-use League\OAuth2\Client\Token\AccessToken;
+use AwU\OAuth2\Client\Token\AccessToken;
 
 interface OAuth2ClientInterface
 {
@@ -32,11 +32,11 @@ interface OAuth2ClientInterface
     /**
      * Call this after the user is redirected back to get the access token.
      *
-     * @return \League\OAuth2\Client\Token\AccessToken
+     * @return \AwU\OAuth2\Client\Token\AccessToken
      *
      * @throws \AwU\OAuth2ClientBundle\Exception\InvalidStateException
      * @throws \AwU\OAuth2ClientBundle\Exception\MissingAuthorizationCodeException
-     * @throws \League\OAuth2\Client\Provider\Exception\IdentityProviderException If token cannot be fetched
+     * @throws \AwU\OAuth2\Client\Provider\Exception\IdentityProviderException If token cannot be fetched
      */
     public function getAccessToken();
 
@@ -44,7 +44,7 @@ interface OAuth2ClientInterface
      * Returns the "User" information (called a resource owner).
      *
      * @param AccessToken $accessToken
-     * @return \League\OAuth2\Client\Provider\ResourceOwnerInterface
+     * @return \AwU\OAuth2\Client\Provider\ResourceOwnerInterface
      */
     public function fetchUserFromToken(AccessToken $accessToken);
 
@@ -54,14 +54,14 @@ interface OAuth2ClientInterface
      * Only use this if you don't need the access token, but only
      * need the user.
      *
-     * @return \League\OAuth2\Client\Provider\ResourceOwnerInterface
+     * @return \AwU\OAuth2\Client\Provider\ResourceOwnerInterface
      */
     public function fetchUser();
 
     /**
      * Returns the underlying OAuth2 provider.
      *
-     * @return \League\OAuth2\Client\Provider\AbstractProvider
+     * @return \AwU\OAuth2\Client\Provider\AbstractProvider
      */
     public function getOAuth2Provider();
 }

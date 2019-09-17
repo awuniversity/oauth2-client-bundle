@@ -11,8 +11,8 @@
 namespace AwU\OAuth2ClientBundle\Client\Provider;
 
 use AwU\OAuth2ClientBundle\Client\OAuth2Client;
-use League\OAuth2\Client\Token\AccessToken;
-use League\OAuth2\Client\Provider\LinkedInResourceOwner;
+use AwU\OAuth2\Client\Token\AccessToken;
+use AwU\OAuth2\Client\Provider\LinkedInResourceOwner;
 
 class LinkedInClient extends OAuth2Client
 {

@@ -11,7 +11,7 @@
 namespace AwU\OAuth2ClientBundle\DependencyInjection\Providers;
 
 use AwU\OAuth2ClientBundle\Client\Provider\InstagramClient;
-use League\OAuth2\Client\Provider\Instagram;
+use AwU\OAuth2\Client\Provider\Instagram;
 use Symfony\Component\Config\Definition\Builder\NodeBuilder;
 
 class InstagramProviderConfigurator implements ProviderConfiguratorInterface
@@ -36,12 +36,12 @@ class InstagramProviderConfigurator implements ProviderConfiguratorInterface
 
     public function getPackagistName()
     {
-        return 'league/oauth2-instagram';
+        return 'awuniversity/oauth2-instagram';
     }
 
     public function getLibraryHomepage()
     {
-        return 'https://github.com/thephpleague/oauth2-instagram';
+        return 'https://github.com/awuniversity/oauth2-instagram';
     }
 
     public function getProviderDisplayName()
