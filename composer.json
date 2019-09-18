@@ -7,15 +7,16 @@
     "license": "MIT",
     "authors": [
         {
-            "name": "JZ"
+            "name": "Jurek"
         }
     ],
+    "minimum-stability": "stable",
     "require": {
-        "php": " >=7.1.0",
-        "symfony/framework-bundle": "^4.0",
-        "symfony/dependency-injection": "^4.0",
-        "symfony/routing": "^4.0",
-        "symfony/http-foundation": "^4.0",
+        "php": " >=7.1",
+        "symfony/framework-bundle": "^4.3",
+        "symfony/dependency-injection": "^4.3",
+        "symfony/routing": "^4.3",
+        "symfony/http-foundation": "^4.3",
         "awuniversity/oauth2-client": ">=1.0",
         "awuniversity/oauth2-aw": ">=1.0"
     },
