@@ -12,6 +12,7 @@ namespace AwU\OAuth2ClientBundle\DependencyInjection;
 
 use AwU\OAuth2ClientBundle\DependencyInjection\Providers\AmazonProviderConfigurator;
 use AwU\OAuth2ClientBundle\DependencyInjection\Providers\Auth0ProviderConfigurator;
+use AwU\OAuth2ClientBundle\DependencyInjection\Providers\AwProviderConfigurator;
 use AwU\OAuth2ClientBundle\DependencyInjection\Providers\AzureProviderConfigurator;
 use AwU\OAuth2ClientBundle\DependencyInjection\Providers\BitbucketProviderConfigurator;
 use AwU\OAuth2ClientBundle\DependencyInjection\Providers\BoxProviderConfigurator;
@@ -85,6 +86,7 @@ class AwUOAuth2ClientExtension extends Extension
     private static $supportedProviderTypes = [
         'amazon' => AmazonProviderConfigurator::class,
         'auth0' => Auth0ProviderConfigurator::class,
+        'aw' => AwProviderConfigurator::class,
         'azure' => AzureProviderConfigurator::class,
         'bitbucket' => BitbucketProviderConfigurator::class,
         'box' => BoxProviderConfigurator::class,
