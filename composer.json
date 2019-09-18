@@ -1,7 +1,7 @@
 {
     "name": "awuniversity/oauth2-client-bundle",
     "type": "symfony-bundle",
-    "description": "Integration with awuniversity/oauth2-client to provide services",
+    "description": "Integration with awuniversity/oauth2-client ...",
     "keywords": [],
     "homepage": "http://awuniversity.pl",
     "license": "MIT",
