@@ -10,55 +10,8 @@
 
 namespace AwU\OAuth2ClientBundle\DependencyInjection;
 
-use AwU\OAuth2ClientBundle\DependencyInjection\Providers\AmazonProviderConfigurator;
-use AwU\OAuth2ClientBundle\DependencyInjection\Providers\Auth0ProviderConfigurator;
 use AwU\OAuth2ClientBundle\DependencyInjection\Providers\AwProviderConfigurator;
-use AwU\OAuth2ClientBundle\DependencyInjection\Providers\AzureProviderConfigurator;
-use AwU\OAuth2ClientBundle\DependencyInjection\Providers\BitbucketProviderConfigurator;
-use AwU\OAuth2ClientBundle\DependencyInjection\Providers\BoxProviderConfigurator;
-use AwU\OAuth2ClientBundle\DependencyInjection\Providers\BufferProviderConfigurator;
-use AwU\OAuth2ClientBundle\DependencyInjection\Providers\CanvasLMSProviderConfigurator;
-use AwU\OAuth2ClientBundle\DependencyInjection\Providers\CleverProviderConfigurator;
-use AwU\OAuth2ClientBundle\DependencyInjection\Providers\DevianArtProviderConfigurator;
-use AwU\OAuth2ClientBundle\DependencyInjection\Providers\DigitalOceanProviderConfigurator;
-use AwU\OAuth2ClientBundle\DependencyInjection\Providers\DiscordProviderConfigurator;
-use AwU\OAuth2ClientBundle\DependencyInjection\Providers\DribbbleProviderConfigurator;
-use AwU\OAuth2ClientBundle\DependencyInjection\Providers\DropboxProviderConfigurator;
-use AwU\OAuth2ClientBundle\DependencyInjection\Providers\DrupalProviderConfigurator;
-use AwU\OAuth2ClientBundle\DependencyInjection\Providers\ElanceProviderConfigurator;
-use AwU\OAuth2ClientBundle\DependencyInjection\Providers\EventbriteProviderConfigurator;
-use AwU\OAuth2ClientBundle\DependencyInjection\Providers\EveOnlineProviderConfigurator;
-use AwU\OAuth2ClientBundle\DependencyInjection\Providers\FacebookProviderConfigurator;
-use AwU\OAuth2ClientBundle\DependencyInjection\Providers\FitbitProviderConfigurator;
-use AwU\OAuth2ClientBundle\DependencyInjection\Providers\FoursquareProviderConfigurator;
-use AwU\OAuth2ClientBundle\DependencyInjection\Providers\GenericProviderConfigurator;
-use AwU\OAuth2ClientBundle\DependencyInjection\Providers\GithubProviderConfigurator;
-use AwU\OAuth2ClientBundle\DependencyInjection\Providers\GitlabProviderConfigurator;
-use AwU\OAuth2ClientBundle\DependencyInjection\Providers\GoogleProviderConfigurator;
-use AwU\OAuth2ClientBundle\DependencyInjection\Providers\HeadHunterProviderConfigurator;
-use AwU\OAuth2ClientBundle\DependencyInjection\Providers\HerokuProviderConfigurator;
-use AwU\OAuth2ClientBundle\DependencyInjection\Providers\InstagramProviderConfigurator;
-use AwU\OAuth2ClientBundle\DependencyInjection\Providers\JiraProviderConfigurator;
-use AwU\OAuth2ClientBundle\DependencyInjection\Providers\KeycloakProviderConfigurator;
-use AwU\OAuth2ClientBundle\DependencyInjection\Providers\LinkedInProviderConfigurator;
-use AwU\OAuth2ClientBundle\DependencyInjection\Providers\MailRuProviderConfigurator;
-use AwU\OAuth2ClientBundle\DependencyInjection\Providers\MicrosoftProviderConfigurator;
-use AwU\OAuth2ClientBundle\DependencyInjection\Providers\MollieProviderConfigurator;
-use AwU\OAuth2ClientBundle\DependencyInjection\Providers\OdnoklassnikiProviderConfigurator;
-use AwU\OAuth2ClientBundle\DependencyInjection\Providers\PaypalProviderConfigurator;
 use AwU\OAuth2ClientBundle\DependencyInjection\Providers\ProviderConfiguratorInterface;
-use AwU\OAuth2ClientBundle\DependencyInjection\Providers\PsnProviderConfigurator;
-use AwU\OAuth2ClientBundle\DependencyInjection\Providers\SalesforceProviderConfigurator;
-use AwU\OAuth2ClientBundle\DependencyInjection\Providers\SlackProviderConfigurator;
-use AwU\OAuth2ClientBundle\DependencyInjection\Providers\StravaProviderConfigurator;
-use AwU\OAuth2ClientBundle\DependencyInjection\Providers\StripeProviderConfigurator;
-use AwU\OAuth2ClientBundle\DependencyInjection\Providers\UberProviderConfigurator;
-use AwU\OAuth2ClientBundle\DependencyInjection\Providers\UnsplashProviderConfigurator;
-use AwU\OAuth2ClientBundle\DependencyInjection\Providers\VimeoProviderConfigurator;
-use AwU\OAuth2ClientBundle\DependencyInjection\Providers\VKontakteProviderConfigurator;
-use AwU\OAuth2ClientBundle\DependencyInjection\Providers\YahooProviderConfigurator;
-use AwU\OAuth2ClientBundle\DependencyInjection\Providers\YandexProviderConfigurator;
-use AwU\OAuth2ClientBundle\DependencyInjection\Providers\ZendeskProviderConfigurator;
 use Symfony\Component\Config\Definition\Builder\NodeDefinition;
 use Symfony\Component\Config\Definition\Builder\TreeBuilder;
 use Symfony\Component\Config\Definition\Exception\InvalidConfigurationException;
@@ -83,54 +36,7 @@ class AwUOAuth2ClientExtension extends Extension
 
     /** @var array */
     private static $supportedProviderTypes = [
-        'amazon' => AmazonProviderConfigurator::class,
-        'auth0' => Auth0ProviderConfigurator::class,
-        'aw' => AwProviderConfigurator::class,
-        'azure' => AzureProviderConfigurator::class,
-        'bitbucket' => BitbucketProviderConfigurator::class,
-        'box' => BoxProviderConfigurator::class,
-        'buffer' => BufferProviderConfigurator::class,
-        'canvas_lms' => CanvasLMSProviderConfigurator::class,
-        'clever' => CleverProviderConfigurator::class,
-        'devian_art' => DevianArtProviderConfigurator::class,
-        'digital_ocean' => DigitalOceanProviderConfigurator::class,
-        'discord' => DiscordProviderConfigurator::class,
-        'dribbble' => DribbbleProviderConfigurator::class,
-        'dropbox' => DropboxProviderConfigurator::class,
-        'drupal' => DrupalProviderConfigurator::class,
-        'elance' => ElanceProviderConfigurator::class,
-        'eve_online' => EveOnlineProviderConfigurator::class,
-        'eventbrite' => EventbriteProviderConfigurator::class,
-        'facebook' => FacebookProviderConfigurator::class,
-        'fitbit' => FitbitProviderConfigurator::class,
-        'four_square' => FoursquareProviderConfigurator::class,
-        'github' => GithubProviderConfigurator::class,
-        'gitlab' => GitlabProviderConfigurator::class,
-        'google' => GoogleProviderConfigurator::class,
-        'headhunter' => HeadHunterProviderConfigurator::class,
-        'heroku' => HerokuProviderConfigurator::class,
-        'instagram' => InstagramProviderConfigurator::class,
-        'jira' => JiraProviderConfigurator::class,
-        'keycloak' => KeycloakProviderConfigurator::class,
-        'linkedin' => LinkedInProviderConfigurator::class,
-        'mail_ru' => MailRuProviderConfigurator::class,
-        'microsoft' => MicrosoftProviderConfigurator::class,
-        'mollie' => MollieProviderConfigurator::class,
-        'odnoklassniki' => OdnoklassnikiProviderConfigurator::class,
-        'paypal' => PaypalProviderConfigurator::class,
-        'psn' => PsnProviderConfigurator::class,
-        'salesforce' => SalesforceProviderConfigurator::class,
-        'slack' => SlackProviderConfigurator::class,
-        'strava' => StravaProviderConfigurator::class,
-        'stripe' => StripeProviderConfigurator::class,
-        'uber' => UberProviderConfigurator::class,
-        'unsplash' => UnsplashProviderConfigurator::class,
-        'vimeo' => VimeoProviderConfigurator::class,
-        'vkontakte' => VKontakteProviderConfigurator::class,
-        'yahoo' => YahooProviderConfigurator::class,
-        'yandex' => YandexProviderConfigurator::class,
-        'zendesk' => ZendeskProviderConfigurator::class,
-        'generic' => GenericProviderConfigurator::class,
+        'aw' => AwProviderConfigurator::class
     ];
 
     /**
