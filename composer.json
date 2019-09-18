@@ -25,7 +25,7 @@
         "psr-4": { "AwU\\OAuth2ClientBundle\\Tests\\": "tests/" }
     },
     "require-dev": {
-        "awuniversity/oauth2-google": "^3.0",
+        "awuniversity/oauth2-google": "^1.0",
         "symfony/security-guard": "^3.0",
         "phpunit/phpunit": "^4.8.36"
     },
