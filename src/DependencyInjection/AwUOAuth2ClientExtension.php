@@ -32,7 +32,6 @@ use AwU\OAuth2ClientBundle\DependencyInjection\Providers\FacebookProviderConfigu
 use AwU\OAuth2ClientBundle\DependencyInjection\Providers\FitbitProviderConfigurator;
 use AwU\OAuth2ClientBundle\DependencyInjection\Providers\FoursquareProviderConfigurator;
 use AwU\OAuth2ClientBundle\DependencyInjection\Providers\GenericProviderConfigurator;
-use AwU\OAuth2ClientBundle\DependencyInjection\Providers\GeocachingProviderConfigurator;
 use AwU\OAuth2ClientBundle\DependencyInjection\Providers\GithubProviderConfigurator;
 use AwU\OAuth2ClientBundle\DependencyInjection\Providers\GitlabProviderConfigurator;
 use AwU\OAuth2ClientBundle\DependencyInjection\Providers\GoogleProviderConfigurator;
@@ -105,7 +104,6 @@ class AwUOAuth2ClientExtension extends Extension
         'facebook' => FacebookProviderConfigurator::class,
         'fitbit' => FitbitProviderConfigurator::class,
         'four_square' => FoursquareProviderConfigurator::class,
-        'geocaching' => GeocachingProviderConfigurator::class,
         'github' => GithubProviderConfigurator::class,
         'gitlab' => GitlabProviderConfigurator::class,
         'google' => GoogleProviderConfigurator::class,
