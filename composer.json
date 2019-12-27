@@ -13,10 +13,10 @@
     "minimum-stability": "stable",
     "require": {
         "php": ">=7.1",
-        "symfony/framework-bundle": "^4.3",
-        "symfony/dependency-injection": "^4.3",
-        "symfony/routing": "^4.3",
-        "symfony/http-foundation": "^4.3",
+        "symfony/framework-bundle": ">=4.3",
+        "symfony/dependency-injection": ">4.3",
+        "symfony/routing": ">=4.3",
+        "symfony/http-foundation": ">=4.3",
         "awuniversity/oauth2-client": ">=1.0",
         "awuniversity/oauth2-aw": ">=1.0"
     },
@@ -24,11 +24,9 @@
         "psr-4": { "AwU\\OAuth2ClientBundle\\": "src/" }
     },
     "autoload-dev": {
-        "psr-4": { "AwU\\OAuth2ClientBundle\\Tests\\": "tests/" }
+        "psr-4": { "AwU\\OAuth2ClientBundle\\Tests\\": "tests/src/" }
     },
     "require-dev": {
-        "symfony/security-guard": "^3.0",
-        "phpunit/phpunit": "^4.8.36"
     },
     "suggest": {
         "symfony/security-guard": "Integration with Symfony's Guard Security layer"
